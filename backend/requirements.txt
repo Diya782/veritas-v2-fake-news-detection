@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pydantic
+scikit-learn
+numpy
+# Optional: uncomment for DistilBERT support
+torch
+transformers
+sentencepiece
+python-multipart
+feedparser 
+sentence-transformers

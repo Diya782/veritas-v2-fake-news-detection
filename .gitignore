@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.env
+*.egg-info/
+
+# ML models (large files)
+ml/saved_models/*.pkl
+ml/saved_models/distilbert_fakenews/
+ml/data/*.csv
+ml/data/*.tsv
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Misc
+.DS_Store
+*.log
+backend/data/results.json

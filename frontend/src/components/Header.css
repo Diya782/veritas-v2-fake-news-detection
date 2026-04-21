@@ -1,0 +1,118 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 11, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  font-size: 1.3rem;
+  filter: grayscale(0.3);
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.logo-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid rgba(79,140,255,0.2);
+  border-radius: 4px;
+  padding: 1px 5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.nav {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.35rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  color: var(--text-primary);
+  background: var(--border);
+}
+
+.nav-btn.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+.header-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--real);
+  box-shadow: 0 0 6px var(--real);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@media (max-width: 600px) {
+  .header-badge { display: none; }
+  .logo-text { font-size: 1.1rem; }
+}
